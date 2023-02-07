@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Range;
 
 @Data
 @AllArgsConstructor
@@ -21,7 +22,7 @@ public class AutorDTO {
     private String nome;
 
     @NotNull(message = "A idade do autor não pode esta vazia.")
-    @Size(max = 100, min= 18, message = "A idade mínima permitida é de 18 e a máxima é de 100 anos")
+    @Range(max = 100, min= 18, message = "A idade mínima permitida é de 18 e a máxima é de 100 anos")
     private Integer idade;
 
 }

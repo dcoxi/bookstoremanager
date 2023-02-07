@@ -2,6 +2,7 @@ package co.ao.bookstoremanager.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Data

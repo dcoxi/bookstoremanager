@@ -2,6 +2,7 @@ package co.ao.bookstoremanager.controller;
 
 import co.ao.bookstoremanager.dto.LivroDTO;
 import co.ao.bookstoremanager.service.ILivroServico;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ public class LivroController {
     }
 
     @PostMapping
-    public String novoLivro(@RequestBody LivroDTO livroDTO){
+    public String novoLivro(@Valid @RequestBody LivroDTO livroDTO){
         return servico.novoLivro(livroDTO);
     }
 }

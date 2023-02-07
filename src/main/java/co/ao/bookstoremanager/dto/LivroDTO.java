@@ -29,7 +29,7 @@ public class LivroDTO {
     @NotBlank(message = "Informe nome da publicação")
     private String nomePublicacao;
 
-    @NotNull
+
     @Valid
     private AutorDTO autor;
 

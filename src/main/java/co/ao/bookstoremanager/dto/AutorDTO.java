@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class AutorDTO {
 
-    private Long Id;
+    private Long id;
 
     @NotBlank(message = "Informe o nome do autor.")
     @Size(max = 255)

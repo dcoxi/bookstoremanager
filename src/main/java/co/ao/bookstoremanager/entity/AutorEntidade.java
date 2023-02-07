@@ -1,4 +1,4 @@
-package co.ao.bookstoremanager.entidade;
+package co.ao.bookstoremanager.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

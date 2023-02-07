@@ -1,4 +1,4 @@
-package co.ao.bookstoremanager.entidade;
+package co.ao.bookstoremanager.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,10 +18,10 @@ public class LivroEntidade {
   @Column(nullable = false, unique = true,length = 355)
   private String nome;
 
-  @Column(nullable = false, length = 1000)
+  @Column(nullable = false)
   private Integer paginas;
 
-  @Column(nullable = false, length = 100)
+  @Column(nullable = false)
   private Integer capitulos;
 
   @Column(nullable = false, length = 100)

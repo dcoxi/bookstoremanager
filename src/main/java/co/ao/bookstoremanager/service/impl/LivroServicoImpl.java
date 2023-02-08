@@ -7,6 +7,8 @@ import co.ao.bookstoremanager.service.ILivroServico;
 import co.ao.bookstoremanager.repository.LivroRepositorio;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 
 @Service
 public class LivroServicoImpl implements ILivroServico {
@@ -32,5 +34,16 @@ public class LivroServicoImpl implements ILivroServico {
         }
 
         return msg;
+    }
+
+    @Override
+    public LivroDTO buscarLivroPorId(Long id) {
+        Optional<LivroEntidade> resultado = repositorio.findById(id);
+        LivroDTO livroDTO = new LivroDTO();
+
+        if(resultado.isPresent())
+            livroDTO = mapper.toLivroDTO(resultado.get());
+
+        return livroDTO;
     }
 }

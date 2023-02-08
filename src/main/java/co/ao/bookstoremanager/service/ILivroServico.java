@@ -6,4 +6,6 @@ public interface ILivroServico {
 
     String novoLivro(LivroDTO livroDTO);
 
+    LivroDTO buscarLivroPorId(Long id);
+
 }

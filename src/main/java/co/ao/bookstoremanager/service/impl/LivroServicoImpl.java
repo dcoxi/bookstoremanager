@@ -5,6 +5,7 @@ import co.ao.bookstoremanager.entity.LivroEntidade;
 import co.ao.bookstoremanager.mapper.LivroMapper;
 import co.ao.bookstoremanager.service.ILivroServico;
 import co.ao.bookstoremanager.repository.LivroRepositorio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -13,14 +14,10 @@ import java.util.Optional;
 @Service
 public class LivroServicoImpl implements ILivroServico {
 
-    private final LivroRepositorio repositorio;
+    @Autowired
+    private static LivroRepositorio repositorio;
 
     private LivroMapper mapper =  LivroMapper.INSTANCE;
-
-    public LivroServicoImpl(LivroRepositorio repositorio) {
-        this.repositorio = repositorio;
-    }
-
 
     @Override
     public String novoLivro(LivroDTO livroDTO) {
